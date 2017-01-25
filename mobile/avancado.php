@@ -56,19 +56,23 @@ li a:hover:not(.active) {
 
 
 }
+
+
+.select {
+  width: 168px;
+  overflow: auto;
+}
 </style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link type="text/css" href="css/custom-theme/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
-  
+<script type="text/JavaScript" src="wp-includes/js/jqueryui.js"></script>
+
   <script>
-  $(document).ready(function () {
-            $('#datepicker').datepicker({
-                format: 'dd/mm/yyyy',                
-                language: 'pt-BR'
-            });
-        });
+  $( function() {
+  $( "#datepicker" ).datepicker();
+} );
   </script>
 
 
@@ -89,12 +93,13 @@ li a:hover:not(.active) {
 <a href="home.php"><h6>Pesquisa Basica >>></h6></a>
 
 <br>
+<br>
 <form action="buscaavancada.php" method="post">
 Pedido: <input type = "text" name= "pedido" />
-
+<br>
 <br>
 Editora:
-<select name="editora">
+<select name="editora" class ="select">
 <option value="%">Selecione...</option>
 <option value="1">Atica</option>
 <option value="2">SER</option>
@@ -105,54 +110,54 @@ Editora:
 
 </select>
 <br>
+<br>
 
 Cliente:
 
+<select name="cliente" class ="select">
+ <option value = "%">Selecione...</option>
+
 <?php
 
-    //db connection
+   //db connection
 mysql_connect("localhost","rodrigo","BKs=hu&67$");
 mysql_select_db("rafael");
 
-//query
-$sql=mysql_query("SELECT cliente FROM rafa group by cliente");
-if(mysql_num_rows($sql)){
-$select= '<select name="cliente">';
-while($rs=mysql_fetch_array($sql)){
-      $select.='<option value="'.$rs['cliente'].'">'.$rs['cliente'].'</option>';
-  }
-}
-$select.='</select>';
-echo $select;
-?>
+//Selecione tudo de nomedatabela em ordem crescente pelo nome
+$consulta=mysql_query("SELECT cliente FROM rafa group by cliente ");
+//Fazendo o looping para exibição de todos registros que contiverem em nomedatabela
+while ($dados = mysql_fetch_array($consulta)) {echo("<option value='".$dados['cliente']."'>".$dados['cliente']."</option>");}?>
 </select>
+
+</select>
+<br>
 <br>
 
 Status do Pedido:
 
+<select name="status">
+ <option value = "%">Selecione...</option>
+
 <?php
 
-    //db connection
+   //db connection
 mysql_connect("localhost","rodrigo","BKs=hu&67$");
 mysql_select_db("rafael");
 
-//query
-$sql=mysql_query("SELECT status FROM rafa group by status");
-if(mysql_num_rows($sql)){
-$select= '<select name="status">';
-while($rs=mysql_fetch_array($sql)){
-      $select.='<option value="'.$rs['status'].'">'.$rs['status'].'</option>';
-  }
-}
-$select.='</select>';
-echo $select;
-?>
+//Selecione tudo de nomedatabela em ordem crescente pelo nome
+$consulta=mysql_query("SELECT status FROM rafa group by status ");
+//Fazendo o looping para exibição de todos registros que contiverem em nomedatabela
+while ($dados = mysql_fetch_array($consulta)) {echo("<option value='".$dados['status']."'>".$dados['status']."</option>");}?>
 </select>
 
+
+
 <br>
+<br>
+<p>
+Data do pedido: <input type="text" id="datepicker"/></p>
 
-Data do pedido: <input id="datepicker" name = "datapedido"/>
-
+<br>
 <br>
 
 Nota Fiscal: <input type = "text" name = "notafisc" />

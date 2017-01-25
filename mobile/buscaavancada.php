@@ -55,7 +55,7 @@ li a:hover:not(.active) {
 
 
 </style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -69,7 +69,7 @@ li a:hover:not(.active) {
 <div id="wrapperHeader"><a class="header-logo" href="home.php"></a></div>
 
 <div style="padding:5px;padding-top:165px;background-color:#8A2BE2;height:260px;color:white">
-<h1><a class="header-logo" href="home.php"></a></h1>    
+<h1><a class="header-logo" href="home.php"></a></h1>
 <h2>Resultado Pesquisa <br> </h2>
 <h4>Pedidos Somos Educação</h4>
 </div>
@@ -86,7 +86,7 @@ $conn = new mysqli($servername, $username, $password, $dbname );
 // Verifica conexão
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
 $pedido = $_POST['pedido'];
 $editora = $_POST ['editora'];
@@ -108,10 +108,10 @@ if ($result->num_rows > 0) {
              " - Data Liberação de Credito: " . $row["dta_liberacao_credito"]. "<br>" .
              " - Data Picking: " . $row["data_est_pick"]. "<br>" .
              " - Status: " . $row["status"]. "<br>" .
-             " - Data Geração NF: " . $row ["data_geracao_nf"]. "<br>" . 
+             " - Data Geração NF: " . $row ["data_geracao_nf"]. "<br>" .
              " - Data da Minuta:" . $row["dat_minuta"]. "<br>" .
              " - Quantidade SKU: " . $row["sku"]."<br>" .
-             " - Quantidade Volumes: " . $row["sku"]."<br>" .
+             " - Quantidade de Exemplares: " . $row["volume"]."<br>" .
              " - Peso: " . $row["peso"]. " Kg <br>" .
              " - Valor do Pedido: R$ " . $row["valor"]."<br>" .
              " - Nota Fiscal: " . $row["nf"]."<br>" .

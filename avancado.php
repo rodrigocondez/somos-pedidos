@@ -48,19 +48,18 @@ li a:hover:not(.active) {
 }
 
 </style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
-<link type="text/css" href="css/custom-theme/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
-  
-  <script>
-  $(document).ready(function () {
-            $('#datepicker').datepicker({
-                format: 'dd/mm/yyyy',                
-                language: 'pt-BR'
-            });
-        });
-  </script>
+<link rel="stylesheet" href="/wp-includes/js/bootstrap.min.css">
+<link type="text/css" href="/wp-includes/js/jquery-ui.theme.css" rel="stylesheet" />
+<link href = "/wp-includes/js/jquery-ui.css" rel = "stylesheet">
+      <script src = "/wp-includes/js/external/jquery/jquery.js"></script>
+      <script src = "/wp-includes/js/jquery-ui.js"></script>
+<!--/wp-includes/js/jquery-ui.css -->
+      <!-- Javascript -->
+      <script>
+         $(function() {
+            $( "#Datepicker" ).datepicker();
+         });
+      </script>
 
 
 </head>
@@ -98,15 +97,15 @@ Cliente:
 
 <select name="cliente">
  <option value = "%">Selecione...</option>
- 
-<?php 
+
+<?php
 
    //db connection
 mysql_connect("localhost","rodrigo","BKs=hu&67$");
 mysql_select_db("rafael");
 
-//Selecione tudo de nomedatabela em ordem crescente pelo nome 
-$consulta=mysql_query("SELECT cliente FROM rafa group by cliente "); 
+//Selecione tudo de nomedatabela em ordem crescente pelo nome
+$consulta=mysql_query("SELECT cliente FROM rafa group by cliente ");
 //Fazendo o looping para exibição de todos registros que contiverem em nomedatabela
 while ($dados = mysql_fetch_array($consulta)) {echo("<option value='".$dados['cliente']."'>".$dados['cliente']."</option>");}?>
 </select>
@@ -118,15 +117,15 @@ Status do Pedido:
 
 <select name="status">
  <option value = "%">Selecione...</option>
- 
-<?php 
+
+<?php
 
    //db connection
 mysql_connect("localhost","rodrigo","BKs=hu&67$");
 mysql_select_db("rafael");
 
-//Selecione tudo de nomedatabela em ordem crescente pelo nome 
-$consulta=mysql_query("SELECT status FROM rafa group by status "); 
+//Selecione tudo de nomedatabela em ordem crescente pelo nome
+$consulta=mysql_query("SELECT status FROM rafa group by status ");
 //Fazendo o looping para exibição de todos registros que contiverem em nomedatabela
 while ($dados = mysql_fetch_array($consulta)) {echo("<option value='".$dados['status']."'>".$dados['status']."</option>");}?>
 </select>
@@ -135,7 +134,7 @@ while ($dados = mysql_fetch_array($consulta)) {echo("<option value='".$dados['st
 
 <br>
 
-Data do pedido: <input id="datepicker" name = "datapedido"/>
+Data do pedido: <input id="Datepicker" name = "Datepicker" data-role="date" type="text"/>
 
 <br>
 
