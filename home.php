@@ -48,7 +48,7 @@ li a:hover:not(.active) {
 }
 
 </style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -57,7 +57,7 @@ li a:hover:not(.active) {
   <li><a href="importar.php">Importar</a></li>
 </ul>
 
-<div style="padding:20px;background-color:#A9A9A9;height:1500px;">
+<div style="padding:20px;background-color:#BBBBBB;height:1500px;">
 
 <h2>Pesquisa Pedidos Somos Educacao <a class="header-logo" href="home.php"></a></h2>
 <a href="avancado.php"><h6>Pesquisa Avançada >>></h6></a>

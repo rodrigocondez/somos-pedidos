@@ -63,18 +63,18 @@ li a:hover:not(.active) {
   overflow: auto;
 }
 </style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link type="text/css" href="css/custom-theme/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
-<script type="text/JavaScript" src="wp-includes/js/jqueryui.js"></script>
-
-  <script>
-  $( function() {
-  $( "#datepicker" ).datepicker();
-} );
-  </script>
-
+<link rel="stylesheet" href="/wp-includes/js/bootstrap.min.css">
+<link type="text/css" href="/wp-includes/js/jquery-ui.theme.css" rel="stylesheet" />
+<link href = "/wp-includes/js/jquery-ui.css" rel = "stylesheet">
+      <script src = "/wp-includes/js/external/jquery/jquery.js"></script>
+      <script src = "/wp-includes/js/jquery-ui.js"></script>
+<!--/wp-includes/js/jquery-ui.css -->
+      <!-- Javascript -->
+      <script>
+         $(function() {
+            $( "#data_pedido" ).datepicker();
+         });
+      </script>
 
 </head>
 <body>
@@ -155,7 +155,8 @@ while ($dados = mysql_fetch_array($consulta)) {echo("<option value='".$dados['st
 <br>
 <br>
 <p>
-Data do pedido: <input type="text" id="datepicker"/></p>
+
+Data do pedido: <input id="data_pedido" name = "data_pedido" data-role="date" type="text"/>
 
 <br>
 <br>

@@ -1,21 +1,30 @@
 <html>
 <head>
 <style>
-body {margin:0;}
+body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
     background-color: #333;
     position: fixed;
     bottom: -10;
     width: 100%;
+    max-width:100%;
+     max-height:100%;
+    overflow-x: hidden;
 }
 
 li {
     float: left;
+    overflow-x: hidden;
 }
 
 li a {
@@ -24,18 +33,24 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    max-width:100%;
+     max-height:100%;
+    overflow-x: hidden;
 }
 
 li a:hover:not(.active) {
     background-color: #112;
+    overflow-y: hidden;
 }
 
 .active {
     background-color: purple;
+    overflow-y: hidden;
 }
 
 #wrapperHeader{
     position: relative;
+    overflow-y: hidden;
 }
 
 
@@ -47,13 +62,16 @@ li a:hover:not(.active) {
     width: 300px;
     height: 165px;
     max-width: 100%;
+    max-width:100%;
+     max-height:100%;
     background: url(/img/Somos.png);
+    overflow-y: hidden;
 
 
 }
 
 </style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
 

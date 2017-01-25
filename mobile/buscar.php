@@ -12,10 +12,12 @@ ul {
     position: fixed;
     bottom: -10;
     width: 100%;
+    overflow-y: hidden;
 }
 
 li {
     float: left;
+    overflow-y: hidden;
 }
 
 li a {
@@ -24,18 +26,22 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    overflow-y: hidden;
 }
 
 li a:hover:not(.active) {
     background-color: #112;
+    overflow-y: hidden;
 }
 
 .active {
     background-color: purple;
+    overflow-y: hidden;
 }
 
 #wrapperHeader{
     position: relative;
+    overflow-y: hidden;
 }
 
 
@@ -48,11 +54,12 @@ li a:hover:not(.active) {
     height: 165px;
     max-width: 100%;
     background: url(/img/Somos.png);
+    overflow-y: hidden;
 
 
 }
 </style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -62,13 +69,13 @@ li a:hover:not(.active) {
   <li><a class="active" href="">Resultado</a></li>
 </ul>
 
-<div style="padding:5px;padding-top:165px;background-color:#8A2BE2;height:260px;color:white">
-<h1><a class="header-logo" href="home.php"></a></h1>    
+<div style="padding:5px;padding-top:165px;background-color:#8A2BE2;height:260px;overflow-y: hidden;color:white">
+<h1><a class="header-logo" href="home.php"></a></h1>
 <h2>Resultado Pesquisa <br> </h2>
 <h4>Pedidos Somos Educação</h4>
 </div>
-<div style ="padding:5px;background-color:#696969;height:10px;color:white"></div>
-<div style="padding:20px;background-color:#A9A9A9;">
+<div style ="padding:5px;background-color:#696969;height:10px;color:white;overflow-y: hidden"></div>
+<div style="padding:20px;background-color:#A9A9A9;overflow-y: hidden;">
 <?php
 $servername = "localhost";
 $username = "rodrigo";
@@ -80,7 +87,7 @@ $conn = new mysqli($servername, $username, $password, $dbname );
 // Verifica conexão
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
 $pedido = $_POST['pedido'];
 $editora = $_POST ['editora'];
@@ -98,7 +105,7 @@ if ($result->num_rows > 0) {
              " - Data Liberação de Credito: " . $row["dta_liberacao_credito"]. "<br>" .
              " - Data Picking: " . $row["data_est_pick"]. "<br>" .
              " - Status: " . $row["status"]. "<br>" .
-             " - Data Geração NF: " . $row ["data_geracao_nf"]. "<br>" . 
+             " - Data Geração NF: " . $row ["data_geracao_nf"]. "<br>" .
              " - Data da Minuta:" . $row["dat_minuta"]. "<br>" .
              " - Quantidade SKU: " . $row["sku"]."<br>" .
              " - Quantidade de Exemplares: " . $row["volume"]."<br>" .

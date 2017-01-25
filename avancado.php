@@ -57,7 +57,7 @@ li a:hover:not(.active) {
       <!-- Javascript -->
       <script>
          $(function() {
-            $( "#Datepicker" ).datepicker();
+            $( "#data_pedido" ).datepicker();
          });
       </script>
 
@@ -134,7 +134,7 @@ while ($dados = mysql_fetch_array($consulta)) {echo("<option value='".$dados['st
 
 <br>
 
-Data do pedido: <input id="Datepicker" name = "Datepicker" data-role="date" type="text"/>
+Data do pedido: <input id="data_pedido" name = "data_pedido" data-role="date" type="text"/>
 
 <br>
 
