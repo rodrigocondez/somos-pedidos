@@ -1,14 +1,18 @@
 <html>
 <head>
 <style>
-body {margin:0;}
+body {margin:0;
+  background: red;
+  width: 100%;
+  height: 100%;
+}
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: visible;
-    background-color: #333;
+    background-color: #404040;
     position: fixed;
     bottom: -10;
     width: 100%;
@@ -43,7 +47,12 @@ li a:hover:not(.active) {
     height: 165px;
     background: url(/img/Somos.png);
     display: inlin;
+}
 
+
+#wrapper{
+  background-color: #d9d9d9;
+  height: 100%;
 
 }
 
@@ -51,20 +60,23 @@ li a:hover:not(.active) {
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
-
+<div id = "wrapper">
 <ul>
   <li><a href="home.php">Home</a></li>
   <li><a href="importar.php">Importar</a></li>
   <li><a class="active" href="">Resultado</a></li>
 </ul>
 
-<div style="padding:5px;background-color:#61079A;height:210px;color:white">
+<div style="padding:5px;background-color:#C5B4E3;height:210px;font-weight:bold;">
 <h1><a class="header-logo" href="home.php"></a></h1>
 <h2>Resultado Pesquisa <br> </h2>
 <h4>Pedidos Somos Educação</h4>
 </div>
-<div style ="padding:5px;background-color:#696969;height:10px;color:white"></div>
-<div style="padding:20px;background-color:#BBBBBB;">
+<div style ="padding:5px;background-color:#696969;height:10px;color:white;border-radius: 10px;"></div>
+<div style="padding:20px;background-color:#d9d9d9; height:auto;">
+  <form>
+  <input type = "button" class="btn btn-warning" value="Nova Pesquisa" onClick="JavaScript: window.history.back();" style="position: absolute; right: 0;">
+  </form>
 <?php
 $servername = "localhost";
 $username = "rodrigo";
@@ -87,21 +99,21 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Saida para cada linha
     while($row = $result->fetch_assoc()) {
-        echo "Pedido: " . $row["pedido"]."<br>" .
-             " - Cliente: " . $row["cliente"]."<br>" .
-             " - Data do Pedido: " . $row["data_pedido"]. "<br>" .
-             " - Data da Onda: " . $row["dta_cria_om"]. "<br>" .
-             " - Data Liberação de Credito: " . $row["dta_liberacao_credito"]. "<br>" .
-             " - Data Picking: " . $row["data_est_pick"]. "<br>" .
-             " - Status: " . $row["status"]. "<br>" .
-             " - Data Geração NF: " . $row ["data_geracao_nf"]. "<br>" .
-             " - Data da Minuta:" . $row["dat_minuta"]. "<br>" .
-             " - Quantidade SKU: " . $row["sku"]."<br>" .
-             " - Quantidade de Exemplares: " . $row["volume"]."<br>" .
-             " - Peso: " . $row["peso"]. " Kg <br>" .
-             " - Valor do Pedido: R$ " . $row["valor"]."<br>" .
-             " - Nota Fiscal: " . $row["nf"]."<br>" .
-             " - Editora: " . $row["editora"] . "<br>" .
+        echo "<strong> Pedido: </strong>" . $row["pedido"]."<br>" .
+             "<strong> - Cliente:  </strong>" . $row["cliente"]."<br>" .
+             "<strong> - Data do Pedido: </strong>" . $row["data_pedido"]. "<br>" .
+             "<strong> - Data da Onda: </strong>". $row["dta_cria_om"]. "<br>" .
+             "<strong> - Data Liberação de Credito: </strong>" . $row["dta_liberacao_credito"]. "<br>" .
+             "<strong> - Data Picking: </strong>". $row["data_est_pick"]. "<br>" .
+             "<strong> - Status: </strong>" . $row["status"]. "<br>" .
+             "<strong> - Data Geração NF: </strong>". $row ["data_geracao_nf"]. "<br>" .
+             "<strong> - Data da Minuta:</strong>" . $row["dat_minuta"]. "<br>" .
+             "<strong> - Quantidade SKU: </strong>". $row["sku"]."<br>" .
+             "<strong> - Quantidade de Exemplares: </strong>" . $row["volume"]."<br>" .
+             "<strong> - Peso: </strong>" . $row["peso"]. " Kg <br>" .
+             "<strong> - Valor do Pedido: </strong> R$ ". $row["valor"]."<br>" .
+             "<strong> - Nota Fiscal: </strong>". $row["nf"]."<br>" .
+             "<strong> - Editora: </strong>". $row["editora"] . "<br>" .
              "<br>";
     }
 } else {
@@ -110,7 +122,12 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
+<form>
+<input type = "button" class="btn btn-warning" value="Nova Pesquisa" onClick="JavaScript: window.history.back();" style="position: absolute; right: 0;">
+</form>
 </div>
+</div>
+
 
 </body>
 </html>

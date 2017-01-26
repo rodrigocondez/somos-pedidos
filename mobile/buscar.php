@@ -58,24 +58,37 @@ li a:hover:not(.active) {
 
 
 }
+
+#wrapper{
+  background-color: #d9d9d9;
+  height: 100%;
+
+}
+
+
 </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
-
+  <script type="Text/javascript" src="/wp-includes/js/prototype.js" > </script>
+<div id = "wrapper">
 <ul>
   <li><a href="home.php">Home</a></li>
   <li><a href="importar.php">Importar</a></li>
   <li><a class="active" href="">Resultado</a></li>
 </ul>
 
-<div style="padding:5px;padding-top:165px;background-color:#8A2BE2;height:260px;overflow-y: hidden;color:white">
+<div style="padding:5px;padding-top:165px;background-color:#C5B4E3;height:260px;overflow-y: hidden;color:white; font-height:bold;">
 <h1><a class="header-logo" href="home.php"></a></h1>
 <h2>Resultado Pesquisa <br> </h2>
 <h4>Pedidos Somos Educação</h4>
 </div>
-<div style ="padding:5px;background-color:#696969;height:10px;color:white;overflow-y: hidden"></div>
-<div style="padding:20px;background-color:#A9A9A9;overflow-y: hidden;">
+<div style ="padding:5px;background-color:#696969;height:10px;color:white;border-radius: 10px;"></div>
+
+<form>
+<input type = "button" class="btn btn-warning" value="Nova Pesquisa" onClick="JavaScript: window.history.back();" style="position: absolute; right: 0;">
+</form>
+<div style="padding:20px;background-color:#d9d9d9; height:auto;">
 <?php
 $servername = "localhost";
 $username = "rodrigo";
@@ -98,21 +111,21 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Saida para cada linha
     while($row = $result->fetch_assoc()) {
-        echo "Pedido: " . $row["pedido"]."<br>" .
-             " - Cliente: " . $row["cliente"]."<br>" .
-             " - Data do Pedido: " . $row["data_pedido"]. "<br>" .
-             " - Data da Onda: " . $row["dta_cria_om"]. "<br>" .
-             " - Data Liberação de Credito: " . $row["dta_liberacao_credito"]. "<br>" .
-             " - Data Picking: " . $row["data_est_pick"]. "<br>" .
-             " - Status: " . $row["status"]. "<br>" .
-             " - Data Geração NF: " . $row ["data_geracao_nf"]. "<br>" .
-             " - Data da Minuta:" . $row["dat_minuta"]. "<br>" .
-             " - Quantidade SKU: " . $row["sku"]."<br>" .
-             " - Quantidade de Exemplares: " . $row["volume"]."<br>" .
-             " - Peso: " . $row["peso"]. " Kg <br>" .
-             " - Valor do Pedido: R$ " . $row["valor"]."<br>" .
-             " - Nota Fiscal: " . $row["nf"]."<br>" .
-             " - Editora: " . $row["editora"] . "<br>" .
+      echo "<strong> Pedido: </strong>" . $row["pedido"]."<br>" .
+           "<strong> - Cliente:  </strong>" . $row["cliente"]."<br>" .
+           "<strong> - Data do Pedido: </strong>" . $row["data_pedido"]. "<br>" .
+           "<strong> - Data da Onda: </strong>". $row["dta_cria_om"]. "<br>" .
+           "<strong> - Data Liberação de Credito: </strong>" . $row["dta_liberacao_credito"]. "<br>" .
+           "<strong> - Data Picking: </strong>". $row["data_est_pick"]. "<br>" .
+           "<strong> - Status: </strong>" . $row["status"]. "<br>" .
+           "<strong> - Data Geração NF: </strong>". $row ["data_geracao_nf"]. "<br>" .
+           "<strong> - Data da Minuta:</strong>" . $row["dat_minuta"]. "<br>" .
+           "<strong> - Quantidade SKU: </strong>". $row["sku"]."<br>" .
+           "<strong> - Quantidade de Exemplares: </strong>" . $row["volume"]."<br>" .
+           "<strong> - Peso: </strong>" . $row["peso"]. " Kg <br>" .
+           "<strong> - Valor do Pedido: </strong> R$ ". $row["valor"]."<br>" .
+           "<strong> - Nota Fiscal: </strong>". $row["nf"]."<br>" .
+           "<strong> - Editora: </strong>". $row["editora"] . "<br>" .
              "<br>";
     }
 } else {

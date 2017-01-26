@@ -82,9 +82,9 @@ li a:hover:not(.active) {
 
 <div id="wrapperHeader"><a class="header-logo" href="home.php"></a></div>
 
-<div style="padding:20px;padding-top:165px;background-color:#A9A9A9;height:1500px;">
+<div style="padding:20px;padding-top:165px;background-color:#d9d9d9;height:100%;">
 
-<div style="padding:20px;background-color:#A9A9A9;height:1500px;">
+<div style="padding:20px;background-color:#d9d9d9;height:100%;">
 
 <h2>Pesquisa Pedidos Somos Educacao <a class="header-logo" href="home.php"></a></h2>
 <a href="avancado.php"><h6>Pesquisa Avançada >>></h6></a>

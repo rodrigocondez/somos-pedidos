@@ -70,10 +70,10 @@ li a:hover:not(.active) {
   <li><a href="importar.php">Importar</a></li>
 </ul>
 
-<div style="padding:20px;background-color:#A9A9A9;height:1500px;">
+<div style="padding:20px;background-color:#d9d9d9;height:100%;">
 
 <h2>Pesquisa Pedidos Somos Educacao <a class="header-logo" href="home.php"></a></h2>
-<a href="home4.php"><h6>Pesquisa Basica >>></h6></a>
+<a href="home.php"><h6>Pesquisa Basica >>></h6></a>
 
 <br>
 <form action="buscaavancada.php" method="post">

@@ -1,9 +1,9 @@
 <?php
-$connect = mysqli_connect('localhost','rodrigo','BKs=hu&67$','rafael'); 
+$connect = mysqli_connect('localhost','rodrigo','BKs=hu&67$','rafael');
 if (!$connect) { //Conexão com configuração acima
  die('Não foi possivel conectar ao MySql: ' . mysqli_error());
 }
- 
+
 $class="";
 $message='';
 $error=0;
@@ -20,21 +20,21 @@ if(isset($_POST["import"]) && !empty($_FILES)) {
     {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             $message .="Arquivo importado com sucesso! <br>";
-            
+
             //teste de import multiplo
             $handle = fopen($target_file,"r");
             $i = 0;
             while (($data = fgetcsv ($handle, 1000, ";")) !== FALSE){
                 if ($i > 0) {
 
-             
+
             // SQL Query inserir no banco de dados
- 
-             
-             
-             $query = "INSERT INTO rafa(id, pedido, cliente, data_pedido, dta_cria_om, dta_liberacao_credito, data_est_pick, status, data_geracao_nf, dat_minuta, id_editora, editora, sku, volume, peso, valor, nf) 
+
+
+
+             $query = "INSERT INTO rafa(id, pedido, cliente, data_pedido, dta_cria_om, dta_liberacao_credito, data_est_pick, status, data_geracao_nf, dat_minuta, id_editora, editora, sku, volume, peso, valor, nf)
                    VALUES('".$data[0]."','".$data[1]."','".$data[2]."','".$data[3]."','".$data[4]."','".$data[5]."','".$data[6]."','".$data[7]."','".$data[8]."','".$data[9]."','".$data[10]."','".$data[11]."','".$data[12]."','".$data[13]."','".$data[14]."','".$data[15]."','".$data[16]."')
-                   ON DUPLICATE KEY UPDATE 
+                   ON DUPLICATE KEY UPDATE
                    id = '".$data[0]."',
                    pedido = '".$data[1]."',
                    cliente = '".$data[2]."',
@@ -122,7 +122,7 @@ li a:hover:not(.active) {
 
 
 </style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -131,7 +131,7 @@ li a:hover:not(.active) {
   <li><a class="active" href="importar.php">Importar</a></li>
 </ul>
 
-<div style="padding:20px;background-color:#A9A9A9;height:1500px;">
+<div style="padding:20px;background-color:#d9d9d9;height:100%;">
 <h2>Importar Pedidos Somos Educacaoo<a class="header-logo" href="home.php"></a></h2>
 
 <div class="container" style="margin-top:20px; margin-bottom:20px;padding:10px;">
@@ -142,11 +142,11 @@ li a:hover:not(.active) {
 <div class="btn-<?php echo $class;?>" style="width:30%;padding:10px;margin-bottom:20px;">
 <?php
         echo $message;
- 
+
  ?>
 </div>
 <?php } ?>
- 
+
 <form role="form" action="<?php echo $_SERVER['REQUEST_URI'];?>" method="post" enctype="multipart/form-data">
 <fieldset class="form-group">
     <div class="form-group">

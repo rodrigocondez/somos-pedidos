@@ -1,4 +1,5 @@
 <html>
+<title>Principal - Somos </title>
 <head>
 <style>
 body {margin:0;}
@@ -8,7 +9,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #404040;
     position: fixed;
     bottom: -10;
     width: 100%;
@@ -16,6 +17,7 @@ ul {
 
 li {
     float: left;
+        background-color: #404040;
 }
 
 li a {
@@ -23,6 +25,7 @@ li a {
     color: white;
     text-align: center;
     padding: 14px 16px;
+    background-color: #404040;
     text-decoration: none;
 }
 
@@ -57,7 +60,7 @@ li a:hover:not(.active) {
   <li><a href="importar.php">Importar</a></li>
 </ul>
 
-<div style="padding:20px;background-color:#BBBBBB;height:1500px;">
+<div style="padding:20px;background-color:#d9d9d9;height:100%;">
 
 <h2>Pesquisa Pedidos Somos Educacao <a class="header-logo" href="home.php"></a></h2>
 <a href="avancado.php"><h6>Pesquisa Avançada >>></h6></a>
