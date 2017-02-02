@@ -104,6 +104,9 @@ Cliente:
 mysql_connect("localhost","rodrigo","BKs=hu&67$");
 mysql_select_db("rafael");
 
+
+header("Content-type: text/html; charset=iso-8859-1");
+
 //Selecione tudo de nomedatabela em ordem crescente pelo nome
 $consulta=mysql_query("SELECT cliente FROM rafa group by cliente ");
 //Fazendo o looping para exibição de todos registros que contiverem em nomedatabela

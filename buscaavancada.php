@@ -85,6 +85,8 @@ $username = "rodrigo";
 $password = "BKs=hu&67$";
 $dbname = "rafael";
 
+header("Content-type: text/html; charset=iso-8859-1");
+
 // Cria Conexão
 $conn = new mysqli($servername, $username, $password, $dbname );
 // Verifica conexão
