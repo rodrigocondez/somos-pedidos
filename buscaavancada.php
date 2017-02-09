@@ -62,7 +62,6 @@ li a:hover:not(.active) {
 <div id = "wrapper">
 <ul>
   <li><a href="home.php">Home</a></li>
-  <li><a href="importar.php">Importar</a></li>
   <li><a class="active" href="">Resultado</a></li>
 </ul>
 
@@ -85,7 +84,6 @@ $username = "rodrigo";
 $password = "BKs=hu&67$";
 $dbname = "rafael";
 
-header("Content-type: text/html; charset=iso-8859-1");
 
 // Cria Conexão
 $conn = new mysqli($servername, $username, $password, $dbname );

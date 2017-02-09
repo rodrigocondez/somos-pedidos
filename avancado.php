@@ -67,12 +67,11 @@ li a:hover:not(.active) {
 
 <ul>
   <li><a class="active" href="home.php">Buscar</a></li>
-  <li><a href="importar.php">Importar</a></li>
 </ul>
 
 <div style="padding:20px;background-color:#d9d9d9;height:100%;">
 
-<h2>Pesquisa Pedidos Somos Educacao <a class="header-logo" href="home.php"></a></h2>
+<h2>Pesquisa Pedidos Somos Educação <a class="header-logo" href="home.php"></a></h2>
 <a href="home.php"><h6>Pesquisa Basica >>></h6></a>
 
 <br>
@@ -105,7 +104,6 @@ mysql_connect("localhost","rodrigo","BKs=hu&67$");
 mysql_select_db("rafael");
 
 
-header("Content-type: text/html; charset=iso-8859-1");
 
 //Selecione tudo de nomedatabela em ordem crescente pelo nome
 $consulta=mysql_query("SELECT cliente FROM rafa group by cliente ");

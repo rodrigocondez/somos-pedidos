@@ -77,7 +77,6 @@ li a:hover:not(.active) {
 
 <ul>
   <li><a class="active" href="home.php">Buscar</a></li>
-  <li><a href="importar.php">Importar</a></li>
 </ul>
 
 <div id="wrapperHeader"><a class="header-logo" href="home.php"></a></div>
@@ -86,7 +85,7 @@ li a:hover:not(.active) {
 
 <div style="padding:20px;background-color:#d9d9d9;height:100%;">
 
-<h2>Pesquisa Pedidos Somos Educacao <a class="header-logo" href="home.php"></a></h2>
+<h2>Pesquisa Pedidos Somos Educação <a class="header-logo" href="home.php"></a></h2>
 <a href="avancado.php"><h6>Pesquisa Avançada >>></h6></a>
 
 <br>

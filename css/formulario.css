@@ -1,0 +1,110 @@
+
+body {margin:0;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: -10;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #112;
+}
+
+.active {
+    background-color: purple;
+}
+
+
+.header-logo{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    display: block;
+    width: 300px;
+    height: 165px;
+    background: url(/img/Somos.png);
+
+
+}
+
+.tiposolicitacao{
+  position: fixed;
+  left: 320px ;
+  border: 3px solid black;
+  border-radius: 11px;
+
+}
+
+.divsolicitante{
+}
+
+.solicitante{
+  position: relative;
+  width: 523px;
+  height: 35px;
+  left: 47px;
+
+
+}
+
+.divaprovador{
+      position: relative;
+      top:5px
+
+}
+
+
+.aprovador{
+  width: 523px; height: 35px
+
+}
+
+.divdrop{
+  display: block;
+  position: relative;
+  top: 10px
+
+}
+
+.bu{
+
+}
+
+.modal{
+  position: relative;
+  left: 35px;
+  top: 20px;
+
+}
+
+
+.cc{
+  display: inline-block;
+  position:absolute ;
+  left: 420px;
+
+
+}
+
+.obs{
+  width: 600px;
+  height: 100px;
+}

@@ -57,7 +57,6 @@ li a:hover:not(.active) {
 
 <ul>
   <li><a class="active" href="home.php">Buscar</a></li>
-  <li><a href="importar.php">Importar</a></li>
 </ul>
 
 <div style="padding:20px;background-color:#d9d9d9;height:100%;">

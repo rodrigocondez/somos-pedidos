@@ -63,7 +63,6 @@ li a:hover:not(.active) {
 <div id = "wrapper">
 <ul>
   <li><a href="home.php">Home</a></li>
-  <li><a href="importar.php">Importar</a></li>
   <li><a class="active" href="">Resultado</a></li>
 </ul>
 
@@ -83,8 +82,6 @@ $username = "rodrigo";
 $password = "BKs=hu&67$";
 $dbname = "rafael";
 
-
-header("Content-type: text/html; charset=iso-8859-1");
 
 // Cria Conexão
 $conn = new mysqli($servername, $username, $password, $dbname );
@@ -106,7 +103,7 @@ if ($result->num_rows > 0) {
              "<strong> - Cliente:  </strong>" . $row["cliente"]."<br>" .
              "<strong> - Data do Pedido: </strong>" . $row["data_pedido"]. "<br>" .
              "<strong> - Data da Onda: </strong>". $row["dta_cria_om"]. "<br>" .
-             "<strong> - Data Liberação de Credito: </strong>" . $row["dta_liberacao_credito"]. "<br>" .
+             "<strong> - Data Liberação de Crédito: </strong>" . $row["dta_liberacao_credito"]. "<br>" .
              "<strong> - Data Picking: </strong>". $row["data_est_pick"]. "<br>" .
              "<strong> - Status: </strong>" . $row["status"]. "<br>" .
              "<strong> - Data Geração NF: </strong>". $row ["data_geracao_nf"]. "<br>" .
