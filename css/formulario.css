@@ -45,53 +45,73 @@ li a:hover:not(.active) {
 
 }
 
+
 .tiposolicitacao{
-  position: fixed;
+  position: absolute;
   left: 320px ;
   border: 3px solid black;
   border-radius: 11px;
+  padding: 10px;
+ }
 
-}
+.divgeral{
+ position: relative;
+  left: 220px;
+  max-width: 100%;
+  width: 1000px;
+ }
 
 .divsolicitante{
+  max-width: 100%;
 }
 
 .solicitante{
   position: relative;
   width: 523px;
   height: 35px;
-  left: 47px;
+  left: 48px;
+  max-width: 100%;
 
 
 }
 
 .divaprovador{
       position: relative;
-      top:5px
+      top:5px;
 
 }
 
 
 .aprovador{
-  width: 523px; height: 35px
+  width: 523px;
+  height: 35px;
+  max-width: 100%;
 
 }
 
 .divdrop{
-  display: block;
   position: relative;
-  top: 10px
+  top: 10px;
+  max-width: 100%;
+  width: 350px
 
 }
 
 .bu{
+  position: relative;
+  left: 320px;
+  top: -23px;
+  max-width: 100%;
+  width: 350px;
 
 }
 
 .modal{
   position: relative;
-  left: 35px;
-  top: 20px;
+  left: 0px;
+  
+  max-width: 100%;
+  width: 350px;
 
 }
 
@@ -99,12 +119,84 @@ li a:hover:not(.active) {
 .cc{
   display: inline-block;
   position:absolute ;
-  left: 420px;
+  left: 434px;
+  max-width: 100%;
+  width: 350px
 
 
 }
+
+
+.linha{
+  position: relative;
+  top: 20px;
+  max-width: 100%;
+  width: 350px;
+
+}
+
+
+.datalimite{
+max-width: 100%;
+width: 350px
+top: 25px;
+
+}
+
+.qtdexempl{
+    position: relative;
+    top: -26px;
+    left: 356px;    
+    max-width: 100%;
+    width: 350px
+
+
+}
+
+.npedido{
+  position: relative;
+  top: -4px; 
+ max-width: 100%;
+
+}
+
+.pedido{
+  position: relative;
+  left: 50px;
+
+}
+
 
 .obs{
-  width: 600px;
+  width: 646px;
   height: 100px;
+top: -18px;
+max-width: 100%;
 }
+
+.botao{
+ position: absolute;
+    left: 726px;  
+    max-width: 100%;
+
+
+}
+
+.peded{
+  position: relative;
+  top: 10px;
+  max-width: 100%;
+  width: 350px
+
+
+}
+
+.btnpedido{
+position: relative;
+    top: -26px;
+    left: 186px;    
+    max-width: 100%;
+    width: 350px
+
+}
+
