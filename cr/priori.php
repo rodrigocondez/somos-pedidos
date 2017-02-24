@@ -37,17 +37,13 @@ Serviço Desejado:
 <input type="checkbox" name="meucheckbox" value="umvalorqualquer">Prioridade de Entrega
 </div>
 <br>
-<br>
-<br>
-<br>
-
 
 <div class = "divgeral">
 
 <div class = "peded">
 <div class = "npedido">
   <form action="prioriped.php" method="post">
-Nº pedido:       <input id="npedido" name = "npedido" type="text" class = "pedido" required="required"/>
+Nº pedido:       <input id="pedido" name = "pedido" type="text" class = "pedido" required="required"/>
   <div class = "bu">
 BU: <select name="editora" id="editora" data-native-menu="false">
 <option value="%">Selecione...</option>

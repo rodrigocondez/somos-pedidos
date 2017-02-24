@@ -1,4 +1,4 @@
-<?php
+d<?php
 $connect = mysqli_connect('localhost','rodrigo','BKs=hu&67$','rafael');
 if (!$connect) { //Conexão com configuração acima
  die('Não foi possivel conectar ao MySql: ' . mysqli_error());

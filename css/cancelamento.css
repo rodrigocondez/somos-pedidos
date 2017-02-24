@@ -93,11 +93,11 @@ li a:hover:not(.active) {
 
 }
 
-.divdrop{
+.mot{
   position: relative;
-  top: 10px;
-  max-width: 100%;
-  width: 350px
+  top: 18px
+;
+
 
 }
 
@@ -172,10 +172,11 @@ top: 25px;
 
 
 .obs{
+  position: relative;
   width: 646px;
   height: 100px;
-top: -18px;
-max-width: 100%;
+  top: 8px;
+  max-width: 100%;
 }
 
 .botao{
